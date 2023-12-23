@@ -13,7 +13,52 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-  public static class OperatorConstants {
-    public static final int kDriverControllerPort = 0;
+
+  public static class MotorIDS {
+    public static final int neitoID = 5;
+    public static final int neoteID = 6;
+    public static final int motorUnoIzqID = 1;
+    public static final int motorDosIzqID = 4;
+    public static final int motorUnoDerID = 2;
+    public static final int motorDosDerID = 3;
+
   }
+
+  public static class DeviceChannels {
+    public static final int klimitSwithChannel = 6;
+    public static final int kboreEncoderChannelA = 8;
+    public static final int kboreEncoderChannelB = 7;
+
+  }
+
+  public static class EncoderData {
+    public static final int kboreCountsPerRev = 2048;
+    public static final double kdiametroLlantaMetros = 0.1524;
+    public static final double kboreDistancePerPulse = (Math.PI * kdiametroLlantaMetros) / kboreCountsPerRev;
+
+
+  }
+  public static class OperatorConstants {
+    public static final int kControlPort = 0;
+    public static final int kTankFwdAxis = 5;
+    public static final int kArcadeTurnAxis = 4;
+    public static final int kFwdAxis = 1;
+    public static final double kBackLeftThreshold = 0.4;
+
+
+  }
+
+  public static class CommandSpeeds {
+    public static final double kTankNormalSpeed = 0.5;
+    public static final double kTankFullSpeed = 0.6;
+    public static final double kArcadeNormalSpeed = 0.5;
+    public static final double kArcadeFullSpeed = 0.6;
+    public static final double kNeitoCommandPlusSpeed = 0.075;
+    public static final double kNeitoCommandNegSpeed = -0.075;
+    public static final double kNeoteCommandPlusSpeed = 0.5;
+    public static final double kNeoteCommandNegSpeed = -0.5;
+
+  }
+
+  
 }

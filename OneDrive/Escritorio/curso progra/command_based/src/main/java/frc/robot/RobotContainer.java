@@ -10,6 +10,7 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.ComplexAuto;
 import frc.robot.commands.DriveForward;
 import frc.robot.commands.NeitoCommand;
+import frc.robot.commands.NeitoPID;
 import frc.robot.commands.NeoteCommand;
 import frc.robot.commands.TankCommand;
 import frc.robot.subsystems.DriveSubsystem;
@@ -22,6 +23,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.simulation.JoystickSim;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.ConditionalCommand;
+import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.button.CommandGenericHID;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -185,6 +187,8 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
     // AQUÍ SE PONE EL COMMAND QUE CORRE EN AUTO.
       //return new DriveForward(1.2); //
+      //return new ComplexAuto();
+      //return new NeitoPID(10);
       return new ComplexAuto();
 
       
